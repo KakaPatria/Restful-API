@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "5dc3d625-47f8-4e42-9dbb-2fdac76c672a",
+		"name": "Blog Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39319684"
+	},
+	"item": [
+		{
+			"name": "new",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Membuat artikel baru.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Belajar di HubAcademy\",\r\n  \"content\": \"Platform pembelajaran modern untuk generasi digital.\",\r\n  \"author\": \"Kaka Patria\",\r\n  \"category_id\": \"67f716b5e584b93197cb0a27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "281"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"119-yZu+uKguQ5uuggMhJtCAU0Oeerk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 02:20:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Belajar di HubAcademy\",\n    \"content\": \"Platform pembelajaran modern untuk generasi digital.\",\n    \"author\": \"Kaka Patria\",\n    \"category_id\": \"67f716b5e584b93197cb0a27\",\n    \"_id\": \"67f72ad2c24ffe322d09bc2a\",\n    \"createdAt\": \"2025-04-10T02:20:02.716Z\",\n    \"updatedAt\": \"2025-04-10T02:20:02.716Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Mengambil daftar artikel dengan kemampuan pagination.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1522"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5f2-NqB3ZxLkBxsdfZ8E/vgj7KAiqKo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 02:25:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"67f6947b7aaea5f8a5407e4a\",\n        \"title\": \"Belajar Node.js\",\n        \"content\": \"Node.js sangat powerful.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f69206a72bea904780b03e\",\n            \"name\": \"Belajar Node Js\"\n        },\n        \"createdAt\": \"2025-04-09T15:38:35.755Z\",\n        \"updatedAt\": \"2025-04-09T15:38:35.755Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72ad2c24ffe322d09bc2a\",\n        \"title\": \"Belajar di HubAcademy\",\n        \"content\": \"Platform pembelajaran modern untuk generasi digital.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f716b5e584b93197cb0a27\",\n            \"name\": \"HubAcademy\"\n        },\n        \"createdAt\": \"2025-04-10T02:20:02.716Z\",\n        \"updatedAt\": \"2025-04-10T02:20:02.716Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72ba9c24ffe322d09bc2d\",\n        \"title\": \"Pengenalan Teknologi Masa Depan\",\n        \"content\": \"Teknologi berkembang sangat cepat di abad 21.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f68978782e97675ae4eacb\",\n            \"name\": \"Teknologi\"\n        },\n        \"createdAt\": \"2025-04-10T02:23:37.650Z\",\n        \"updatedAt\": \"2025-04-10T02:23:37.650Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72bb5c24ffe322d09bc30\",\n        \"title\": \"Dasar-Dasar Node.js\",\n        \"content\": \"Node.js adalah runtime JavaScript yang berjalan di server.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f69206a72bea904780b03e\",\n            \"name\": \"Belajar Node Js\"\n        },\n        \"createdAt\": \"2025-04-10T02:23:49.752Z\",\n        \"updatedAt\": \"2025-04-10T02:23:49.752Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72bcac24ffe322d09bc33\",\n        \"title\": \"Apa itu Inagata?\",\n        \"content\": \"Mengenal Inagata sebagai penyedia solusi digital.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f717dee584b93197cb0a29\",\n            \"name\": \"inagata\"\n        },\n        \"createdAt\": \"2025-04-10T02:24:10.356Z\",\n        \"updatedAt\": \"2025-04-10T02:24:10.356Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Mengambil detail artikel berdasarkan ID.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Manfaat Big Data untuk Bisnis\",\r\n  \"content\": \"Big Data membantu perusahaan dalam pengambilan keputusan berbasis data.\",\r\n  \"author\": \"Kaka Patria\",\r\n  \"category_id\": \"67f7298bc24ffe322d09bc24\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles/67f6947b7aaea5f8a5407e4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles",
+								"67f6947b7aaea5f8a5407e4a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"118-TpoLbh42Q/HHbrlCmWWY4dUjw+s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 02:52:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67f6947b7aaea5f8a5407e4a\",\n    \"title\": \"Belajar Node.js\",\n    \"content\": \"Node.js sangat powerful.\",\n    \"author\": \"Kaka Patria\",\n    \"category_id\": {\n        \"_id\": \"67f69206a72bea904780b03e\",\n        \"name\": \"Belajar Node Js\"\n    },\n    \"createdAt\": \"2025-04-09T15:38:35.755Z\",\n    \"updatedAt\": \"2025-04-09T15:38:35.755Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Memperbarui artikel berdasarkan ID.",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Judul Baru\",\r\n  \"content\": \"Isi yang diperbarui.\",\r\n  \"author\": \"Kaka Patria Firnandes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles/67f7332ec24ffe322d09bc6a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles",
+								"67f7332ec24ffe322d09bc6a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f8-GTkLySIwOLISY1U8I6zhP+naWj0\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 02:56:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67f7332ec24ffe322d09bc6a\",\n    \"title\": \"Judul Baru\",\n    \"content\": \"Isi yang diperbarui.\",\n    \"author\": \"Kaka Patria Firnandes\",\n    \"category_id\": \"67f716b5e584b93197cb0a27\",\n    \"createdAt\": \"2025-04-10T02:55:42.911Z\",\n    \"updatedAt\": \"2025-04-10T02:56:48.984Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Menghapus artikel berdasarkan ID.",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Judul Baru\",\r\n  \"content\": \"Isi yang diperbarui.\",\r\n  \"author\": \"Kaka Patria Firnandes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles/67f72bcac24ffe322d09bc33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles",
+								"67f72bcac24ffe322d09bc33"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-Rk4m8FFko1nHHChkkVQovFQNYQk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 02:59:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Article deleted\"\n}"
+				},
+				{
+					"name": "Menambah kategori baru",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Politeknik Negeri Jember\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-ktzVdSd9XjYyatjcEw5je7259rY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 03:01:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Politeknik Negeri Jember\",\n    \"_id\": \"67f73477c24ffe322d09bc70\",\n    \"createdAt\": \"2025-04-10T03:01:11.242Z\",\n    \"updatedAt\": \"2025-04-10T03:01:11.242Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Mengambil daftar kategori.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Politeknik Negeri Jember\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2321"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"911-hcyZZS2Do6gsN0g8qTm4/6pmAUw\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 03:01:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"67f68978782e97675ae4eacb\",\n        \"name\": \"Teknologi\",\n        \"createdAt\": \"2025-04-09T14:51:36.506Z\",\n        \"updatedAt\": \"2025-04-09T14:51:36.506Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f69206a72bea904780b03e\",\n        \"name\": \"Belajar Node Js\",\n        \"createdAt\": \"2025-04-09T15:28:06.149Z\",\n        \"updatedAt\": \"2025-04-09T15:28:06.149Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f716b5e584b93197cb0a27\",\n        \"name\": \"HubAcademy\",\n        \"createdAt\": \"2025-04-10T00:54:13.849Z\",\n        \"updatedAt\": \"2025-04-10T00:54:13.849Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f717dee584b93197cb0a29\",\n        \"name\": \"inagata\",\n        \"createdAt\": \"2025-04-10T00:59:10.836Z\",\n        \"updatedAt\": \"2025-04-10T00:59:10.836Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f71807e584b93197cb0a2b\",\n        \"name\": \"hub.inagata.com\",\n        \"createdAt\": \"2025-04-10T00:59:51.133Z\",\n        \"updatedAt\": \"2025-04-10T00:59:51.133Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f71843e584b93197cb0a2e\",\n        \"name\": \"hubacademy_inagata\",\n        \"createdAt\": \"2025-04-10T01:00:51.212Z\",\n        \"updatedAt\": \"2025-04-10T01:00:51.212Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f7293cc24ffe322d09bc14\",\n        \"name\": \"Kecerdasan Buatan\",\n        \"createdAt\": \"2025-04-10T02:13:16.110Z\",\n        \"updatedAt\": \"2025-04-10T02:13:16.110Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72957c24ffe322d09bc16\",\n        \"name\": \"Internet of Things (IoT)\",\n        \"createdAt\": \"2025-04-10T02:13:43.456Z\",\n        \"updatedAt\": \"2025-04-10T02:13:43.456Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f7295ec24ffe322d09bc18\",\n        \"name\": \"Blockchain\",\n        \"createdAt\": \"2025-04-10T02:13:50.694Z\",\n        \"updatedAt\": \"2025-04-10T02:13:50.694Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72965c24ffe322d09bc1a\",\n        \"name\": \"Cloud Computing\",\n        \"createdAt\": \"2025-04-10T02:13:57.886Z\",\n        \"updatedAt\": \"2025-04-10T02:13:57.886Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f7296dc24ffe322d09bc1c\",\n        \"name\": \"Augmented Reality (AR)\",\n        \"createdAt\": \"2025-04-10T02:14:05.851Z\",\n        \"updatedAt\": \"2025-04-10T02:14:05.851Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72977c24ffe322d09bc1e\",\n        \"name\": \"Virtual Reality (VR)\",\n        \"createdAt\": \"2025-04-10T02:14:15.898Z\",\n        \"updatedAt\": \"2025-04-10T02:14:15.898Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f7297fc24ffe322d09bc20\",\n        \"name\": \"5G\",\n        \"createdAt\": \"2025-04-10T02:14:23.103Z\",\n        \"updatedAt\": \"2025-04-10T02:14:23.103Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72985c24ffe322d09bc22\",\n        \"name\": \"Robotika\",\n        \"createdAt\": \"2025-04-10T02:14:29.180Z\",\n        \"updatedAt\": \"2025-04-10T02:14:29.180Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f7298bc24ffe322d09bc24\",\n        \"name\": \"Big Data\",\n        \"createdAt\": \"2025-04-10T02:14:35.512Z\",\n        \"updatedAt\": \"2025-04-10T02:14:35.512Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f73477c24ffe322d09bc70\",\n        \"name\": \"Politeknik Negeri Jember\",\n        \"createdAt\": \"2025-04-10T03:01:11.242Z\",\n        \"updatedAt\": \"2025-04-10T03:01:11.242Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Mencari artikel berdasarkan kategori atau kata kunci dalam judul.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/articles/search?category_id=67f69206a72bea904780b03e&keyword=node",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"articles",
+								"search"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "67f69206a72bea904780b03e"
+								},
+								{
+									"key": "keyword",
+									"value": "node"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "601"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"259-gau7YcoVdGiPWvAYxOk6KNHiiVg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Apr 2025 03:10:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"67f6947b7aaea5f8a5407e4a\",\n        \"title\": \"Belajar Node.js\",\n        \"content\": \"Node.js sangat powerful.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f69206a72bea904780b03e\",\n            \"name\": \"Belajar Node Js\"\n        },\n        \"createdAt\": \"2025-04-09T15:38:35.755Z\",\n        \"updatedAt\": \"2025-04-09T15:38:35.755Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67f72bb5c24ffe322d09bc30\",\n        \"title\": \"Dasar-Dasar Node.js\",\n        \"content\": \"Node.js adalah runtime JavaScript yang berjalan di server.\",\n        \"author\": \"Kaka Patria\",\n        \"category_id\": {\n            \"_id\": \"67f69206a72bea904780b03e\",\n            \"name\": \"Belajar Node Js\"\n        },\n        \"createdAt\": \"2025-04-10T02:23:49.752Z\",\n        \"updatedAt\": \"2025-04-10T02:23:49.752Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}
